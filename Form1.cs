@@ -63,8 +63,8 @@ namespace nesne_tbanaloı_programlama_odev_1
             SqlCommand komut = new SqlCommand("UPDATE RAYS SET Ad = @ad, Soyad = @soyad, numara = @yeniNumara WHERE numara = @eskiNumara", baglanti);
             komut.Parameters.AddWithValue("@ad", txtAd.Text);
             komut.Parameters.AddWithValue("@soyad", txtSoyad.Text);
-            komut.Parameters.AddWithValue("@yeniNumara", txtNumara.Text); // Kutudaki yeni numara
-            komut.Parameters.AddWithValue("@eskiNumara", secilen);        // Tablodan seçilen eski numara
+            komut.Parameters.AddWithValue("@yeniNumara", txtNumara.Text); 
+            komut.Parameters.AddWithValue("@eskiNumara", secilen);        
             komut.ExecuteNonQuery();
             baglanti.Close();
 
